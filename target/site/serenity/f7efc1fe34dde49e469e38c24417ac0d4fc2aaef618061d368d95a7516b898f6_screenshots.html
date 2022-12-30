@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="82c36dd38d9676b50702cea1465a4c4edeed3581cad67b03092514fc68821025.html">Automation Testing Using Screenplay Pattern.</a></span>
+                > <span class="truncate-60"><a
+                    href="f7efc1fe34dde49e469e38c24417ac0d4fc2aaef618061d368d95a7516b898f6.html">Fill a student registration form using mandatory fields </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-12-2023 19:44</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Automation Testing Using Screenplay Pattern. </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As an automation tester<br />
+I need to practice automation testing using Screenplay patter<br />
+for learn about serenity BDD framework
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Fill a student registration form using mandatory fields
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the student is on landing page of Tools QA<br>When him browse to registration form<br>And him has filled it and submitted<br><table class='embedded'><thead><th>firstName</th><th>&lt;firstName&gt;</th></thead><tbody><tr><td>lastName</td><td>&lt;lastName&gt;</td></tr><tr><td>gender</td><td>&lt;gender&gt;</td></tr><tr><td>mobile</td><td>&lt;mobile&gt;</td></tr></tbody></table><br>Then the student will see a registration information</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1e3b2bdca18b97c442d9d08640cd52caf5a526f375035ceebdd9fced51aba877.png" title=" 1: Fill a student registration form using mandatory fields ({firstName=Juan, lastName=Arroyave, gender=Male, mobile=1234567890})" width="1920"/>
+                <img src="1e3b2bdca18b97c442d9d08640cd52caf5a526f375035ceebdd9fced51aba877.png" title=" Given the student is on landing page of Tools QA" width="1920"/>
+                <img src="1e3b2bdca18b97c442d9d08640cd52caf5a526f375035ceebdd9fced51aba877.png" title=" Mario open landing page" width="1920"/>
+                <img src="1e3b2bdca18b97c442d9d08640cd52caf5a526f375035ceebdd9fced51aba877.png" title=" Mario opens the Landing page" width="1920"/>
+                <img src="20018e1e43faad6845acc1a01a26bfdc20b09ea3a121bfbd12687c6b11e07759.png" title=" Mario opens the Landing page (completed)" width="1920"/>
+                <img src="20018e1e43faad6845acc1a01a26bfdc20b09ea3a121bfbd12687c6b11e07759.png" title=" Mario open landing page (completed)" width="1920"/>
+                <img src="20018e1e43faad6845acc1a01a26bfdc20b09ea3a121bfbd12687c6b11e07759.png" title=" Given the student is on landing page of Tools QA (completed)" width="1920"/>
+                <img src="20018e1e43faad6845acc1a01a26bfdc20b09ea3a121bfbd12687c6b11e07759.png" title=" When him browse to registration form" width="1920"/>
+                <img src="20018e1e43faad6845acc1a01a26bfdc20b09ea3a121bfbd12687c6b11e07759.png" title=" Mario browse to practice form" width="1920"/>
+                <img src="98d531b13203a173f40b14e175706d8bb4a5042ab3638aac82a9b93e90d5af78.png" title=" Mario clicks on Elements" width="1920"/>
+                <img src="449f143d67277d27c0a30ab9a24c940db17f99be06c37e6f2fbd7c7b63e53cfd.png" title=" Mario clicks on Elements (completed)" width="1920"/>
+                <img src="fcf2587bef6dbb9057f9c9e7f0514ca6a12f87b681222d6c1b92843a03d8c0e9.png" title=" Mario clicks on Form" width="1920"/>
+                <img src="579d39b0055fc5edce8cbdc3a88cc6a0a0340b9cbcf1d38777456508e8d0a7ae.png" title=" Mario clicks on Form (completed)" width="1920"/>
+                <img src="5ee1bead240fc9e5d6958014e125224c0ca1ee8d348219f14fc9141d013eafdd.png" title=" Mario clicks on Practice Form" width="1920"/>
+                <img src="a487f3044044e73a54df3eb351bdc2e7b475fb6a85938ccb032fc571dc432dab.png" title=" Mario clicks on Practice Form (completed)" width="1920"/>
+                <img src="a487f3044044e73a54df3eb351bdc2e7b475fb6a85938ccb032fc571dc432dab.png" title=" Mario browse to practice form (completed)" width="1920"/>
+                <img src="a487f3044044e73a54df3eb351bdc2e7b475fb6a85938ccb032fc571dc432dab.png" title=" When him browse to registration form (completed)" width="1920"/>
+                <img src="a487f3044044e73a54df3eb351bdc2e7b475fb6a85938ccb032fc571dc432dab.png" title=" And him has filled it and submitted
+| firstName | Juan |
+| lastName | Arroyave |
+| gender | Male |
+| mobile | 1234567890 |" width="1920"/>
+                <img src="a487f3044044e73a54df3eb351bdc2e7b475fb6a85938ccb032fc571dc432dab.png" title=" Mario fill all fields practice form" width="1920"/>
+                <img src="5386ec9d0f035bdddf94aa0e1a03f842a879a26346c0d7521a31652a2eae1b6c.png" title=" Mario clears field First name" width="1920"/>
+                <img src="89f05c15c2483d5e652c0c5b62bfebaef6750413903ceffe05d114eaad7695f3.png" title=" Mario clears field First name (completed)" width="1920"/>
+                <img src="89f05c15c2483d5e652c0c5b62bfebaef6750413903ceffe05d114eaad7695f3.png" title=" Mario enters 'Juan' into First name" width="1920"/>
+                <img src="215387410470eb7d183db1ccd32563776367febe75456f366b82ba96fb81e34f.png" title=" Mario enters 'Juan' into First name (completed)" width="1920"/>
+                <img src="215387410470eb7d183db1ccd32563776367febe75456f366b82ba96fb81e34f.png" title=" Mario clears field Last name" width="1920"/>
+                <img src="a19b05f8d91efe05ee8fff666c65969c487eadd4f7ebf62c921fc457adb1b298.png" title=" Mario clears field Last name (completed)" width="1920"/>
+                <img src="a19b05f8d91efe05ee8fff666c65969c487eadd4f7ebf62c921fc457adb1b298.png" title=" Mario enters 'Arroyave' into Last name" width="1920"/>
+                <img src="bded1b34231e19b06327512acd15aac6aa159daa17b78bab5c4890e4664eb9a6.png" title=" Mario enters 'Arroyave' into Last name (completed)" width="1920"/>
+                <img src="bded1b34231e19b06327512acd15aac6aa159daa17b78bab5c4890e4664eb9a6.png" title=" Mario clicks on Gender male" width="1920"/>
+                <img src="0327e35429e332ea64b4980591dae2d4fe9e1254a5c87ecbcbb88111dfa25506.png" title=" Mario clicks on Gender male (completed)" width="1920"/>
+                <img src="76f7bf5520da1ec4a2d88a1cc7dcb56c91458537edbe3d1374b877ced2bdeff8.png" title=" Mario clears field Mobile" width="1920"/>
+                <img src="609af91fda2ace09999758707bec6f6b5c2344693ddeba6ebd53b7e9ef4441b3.png" title=" Mario clears field Mobile (completed)" width="1920"/>
+                <img src="609af91fda2ace09999758707bec6f6b5c2344693ddeba6ebd53b7e9ef4441b3.png" title=" Mario enters '1234567890' into Mobile" width="1920"/>
+                <img src="176f675548398435702aa63a3db2b21a2dcb28a79e5588086d8f50fd9292e17e.png" title=" Mario enters '1234567890' into Mobile (completed)" width="1920"/>
+                <img src="4561db6ec07f60df09a099b25e4d61438f70f46bf81184525cef16abff01fcba.png" title=" Mario fill all fields practice form (completed)" width="1920"/>
+                <img src="4561db6ec07f60df09a099b25e4d61438f70f46bf81184525cef16abff01fcba.png" title=" And him has filled it and submitted
+| firstName | Juan |
+| lastName | Arroyave |
+| gender | Male |
+| mobile | 1234567890 | (completed)" width="1920"/>
+                <img src="4561db6ec07f60df09a099b25e4d61438f70f46bf81184525cef16abff01fcba.png" title=" Then the student will see a registration information" width="1920"/>
+                <img src="a7e16d1afe4b02c8622d5d4ce48713ade272af77b7b29bb00dd2ed529eb68c4b.png" title=" Then practice form should be (true)" width="1920"/>
+                <img src="a7e16d1afe4b02c8622d5d4ce48713ade272af77b7b29bb00dd2ed529eb68c4b.png" title=" Then practice form should be (true) (completed)" width="1920"/>
+                <img src="a7e16d1afe4b02c8622d5d4ce48713ade272af77b7b29bb00dd2ed529eb68c4b.png" title=" Then the student will see a registration information (completed)" width="1920"/>
+                <img src="a7e16d1afe4b02c8622d5d4ce48713ade272af77b7b29bb00dd2ed529eb68c4b.png" title=" 1: Fill a student registration form using mandatory fields ({firstName=Juan, lastName=Arroyave, gender=Male, mobile=1234567890}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.6.0</span>
+</div>
+</body>
+</html>
